@@ -12,6 +12,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
+    html{
+      width: 100%
+    }
   body {
     font: 400 15px Lato, sans-serif;
     line-height: 1.8;
@@ -189,6 +192,21 @@
       font-size: 150px;
     }
   }
+  .my-btn, #book, #call{
+    background-color: #00796B;
+    color: whitesmoke;
+    width: 100%;
+  }
+  #call:hover, #book:hover,.my-btn:hover{
+    background-color:#B2DFDB ;
+    color:black;
+  }
+  #form{
+    
+    background-color: #f8f8f8;
+    border: 1px solid black;
+    border-radius: 0%;
+  }
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -209,7 +227,6 @@
         <li><a href="#services">HOW IT WORKS</a></li>
         <li><a href="#pricing">PRICING</a></li>
         <li><a href="#portfolio">SERVICES</a></li>
-        <li><a href="#contact">CONTACT</a></li>
       </ul>
     </div>
   </div>
@@ -224,18 +241,26 @@
         <div class="col-sm-2"></div>
         <div class=" col-12 col-sm-5 ">
             <div class="row">
+              <div class="col-sm-2"></div>
+              <div class="col-12 col-sm-8" id="form">
                 <h2>Contact Us</h2>  
-                <div class="col-sm-6 form-group">
+                <div class="col-12 form-group">
                     <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
                 </div>
-                <div class="col-sm-6 form-group">
+                <div class="col-12 form-group">
                     <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
                 </div>
-            </div>
-            <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-            <div class="row">
-              <div class="col-sm-12 form-group">
-                <button class="btn btn-default pull-right" type="submit">Send</button>
+                <div class="col-12 form-group">
+                  <input class="form-control" id="phone" name="phone" placeholder="Phone number" type="tel" required>
+                </div>
+                <div class="col-12 form-group">
+                  <input class="form-control" id="city" name="city" placeholder="City" type="text" required>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12 form-group">
+                    <button class="btn my-btn" type="submit" >Send</button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -246,41 +271,17 @@
 <div id='about' class="container-fluid bg-grey text-center">
 
   <h2>What We Do </h2>
-  <h4>Some of our key works</h4>
-    <div id="mainCarousel" class="carousel slide text-center" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-      <li data-target="#mainCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#mainCarousel" data-slide-to="1"></li>
-      <li data-target="#mainCarousel" data-slide-to="2"></li>
-      </ol>
-
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner" role="listbox">
-      
-          <div class="item active">
-              <img src="./img/c7.jpg" class="img-fluid" style="width: 100%;height: 500px;"  alt="1">
-          </div>
-          <div class="item">
-              <img src="./img/c8.jpg" class="img-fluid" style="width: 100%;height: 500px;"  alt="1">
-          </div>
-          <div class="item">
-              <img src="./img/c9.jpg" class="img-fluid" style="width: 100%;height: 500px;"  alt="1">
-          </div>
-      
-      </div>
-
-      <!-- Left and right controls -->
-      <a class="left carousel-control" href="#mainCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#mainCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-      </a>
+  <div class="row slideanim">
+    <div class="col-sm-8">
+      <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
+      <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div class="d-none d-sm-block col-sm-4">
+      <img src='./img/side.jpg' alt='company image' class="img-fluid">
+    </div>
   </div>
-  <div class="row">
+  <div class="row slideanim">
     <div class="col-12 col-sm-4">
           
         <div id="Carousel1" class="carousel slide text-center" data-ride="carousel">
@@ -403,7 +404,7 @@
 
 
   <div class="col-4 offset-4">
-    <button class="btn btn-success " style='height:7rem'><span style="font-size: x-large;">Book a free councellation</span></button>
+    <button class="btn btn-lg " id='book' style='height:7rem;width: auto;'><span style="font-size: x-large;">Book a free Consultation</span></button>
   </div>
 
 
@@ -488,7 +489,6 @@
 
   </div><br>
   <h2>WHY US</h2>
-  <h4>What we offer</h4>
   <br>
   <div class="row slideanim">
     <div class="col-sm-4">
@@ -555,59 +555,59 @@
   </div>
   <div class="row slideanim">
     <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
+      <div class="panel panel-default text-center" style="height: 600px;">
         <div class="panel-heading">
-          <h1>Basic</h1>
+          <h1>Free</h1>
         </div>
         <div class="panel-body">
-          <p><strong>20</strong> Lorem</p>
-          <p><strong>15</strong> Ipsum</p>
-          <p><strong>5</strong> Dolor</p>
-          <p><strong>2</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
+          <p><strong>Initial Consultation</strong></p>
         </div>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
         <div class="panel-footer">
-          <h3>$19</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
+          <h3>Rs. 0</h3>         
+          <button class="btn btn-lg" style="margin-top: 30px;margin-bottom: 4px;">Get started</button>
         </div>
       </div>      
     </div>     
     <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
+      <div class="panel panel-default text-center" style="height: 600px;">
         <div class="panel-heading">
-          <h1>Pro</h1>
+          <h1>Design</h1>
         </div>
         <div class="panel-body">
-          <p><strong>50</strong> Lorem</p>
-          <p><strong>25</strong> Ipsum</p>
-          <p><strong>10</strong> Dolor</p>
-          <p><strong>5</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
+          <p><strong>Complete layout</strong></p>
+          <p><strong>Ceiling</strong></p>
+          <p><strong>Wall design</strong></p>
+          <p><strong>Flooring</strong></p>
+          <p><strong>Furniture</strong></p>
         </div>
-        <div class="panel-footer">
-          <h3>$29</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
+        <br>
+        <div class="panel-footer" style="margin-top: 60px;">
+          <h3>Rs. 4,999/-</h3>
+          <h4 style="margin-bottom: 5px;">per room</h4>
+          <button class="btn btn-lg " style="margin-bottom: 4px;">Get started</button>
         </div>
       </div>      
     </div>       
     <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
+      <div class="panel panel-default text-center" style="height: 600px;">
         <div class="panel-heading">
-          <h1>Premium</h1>
+          <h1>Design and Construct</h1>
         </div>
         <div class="panel-body">
-          <p><strong>100</strong> Lorem</p>
-          <p><strong>50</strong> Ipsum</p>
-          <p><strong>25</strong> Dolor</p>
-          <p><strong>10</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
+          <p><strong>Dedicated handling of project</strong></p>
+          <p><strong>Dedicated Team</strong></p>
+          <p><strong>Site visit</strong></p>
+          <p><strong>3D Layout</strong></p>
+          <p><strong>Endless</strong></p>
         </div>
-        <div class="panel-footer">
-          <h3>$49</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
+        <br>
+        <div class="panel-footer" style="margin-top: 20px;">
+          <h3>Rs. 7,999/-</h3>
+          <h4 style="margin-bottom: 5px;">per room</h4>
+          <button class="btn btn-lg " style="margin-bottom: 4px;">Get started</button>
         </div>
       </div>      
     </div>    
@@ -624,7 +624,7 @@
     <div class="row slideanim">
       <div class="col-12 col-sm-4">
         <div class="card" >
-          <img class="card-img-top" src="./img/c8.jpg" alt="Modular kitchen">
+          <img class="card-img-top" src="./img/c8.jpg" width="100%" alt="Modular kitchen">
           <h4>Modular Kitchen</h4>  
         </div>
       </div>
@@ -641,13 +641,13 @@
           </div>
           <br>
           <div class="row">
-            <button class="btn btn-success">Get a Call Back</button>
+            <button class="btn" id='call' width='auto'>Get a Call Back</button>
           </div>
         </form>
       </div>
       <div class="col-12 col-sm-4">
         <div class="card" >
-          <img class="card-img-top" src="./img/wood.jpg" alt="Wooding">
+          <img class="card-img-top" src="./img/wood.jpg" width="100%" alt="Wooding">
           <h4>Wooding and Furniture</h4>  
         </div>
       </div>
@@ -655,19 +655,19 @@
     <div class="row slideanim">
       <div class="col-12 col-sm-4">
         <div class="card" >
-          <img class="card-img-top" src="./img/bedroom.jpg" alt="bedroom">
+          <img class="card-img-top" src="./img/bedroom.jpg" width="100%" alt="bedroom">
           <h4>Bedroom Designing</h4>  
         </div>
       </div>
       <div class="col-12 col-sm-4">
         <div class="card" >
-          <img class="card-img-top" src="./img/interior.jpg" alt="Home interior Designing">
+          <img class="card-img-top" src="./img/interior.jpg" width="100%" alt="Home interior Designing">
           <h4>Home Interiors</h4>  
         </div>
       </div>
       <div class="col-12 col-sm-4">
         <div class="card" >
-          <img class="card-img-top" src="./img/bathroom.jpg" alt="Bathroom Designing">
+          <img class="card-img-top" src="./img/bathroom.jpg" width="100%" alt="Bathroom Designing">
           <h4>Bathroom Designing</h4>  
         </div>
       </div>
@@ -712,21 +712,6 @@
     </div>
   </div>
   
-  <div class="container-fluid bg-grey">
-    <div class="row slideanim">
-      <div class="col-sm-4">
-        <br><br><br>
-        <span class="glyphicon glyphicon-globe logo slideanim"></span>
-      </div>
-      <div class="col-sm-8">
-        <h2>Testimonial</h2><br>
-        <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-        <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </div>
-    </div>
-  </div>
-
   <div class="container">
     <div class="row slideanim">
       <h2>Our Partners</h2>
@@ -734,7 +719,7 @@
     <div class="row slideanim">
       <div class="col-12 col-sm-4">
         <div class="card" >
-          <img class="card-img-top" src="./img/chandler.jpg" alt="Card image">
+          <img class="card-img-top" src="./img/chandler.jpg" alt="Card image" height="300px" width="300px">
           <div class="card-body">
             <h4 class="card-title">Chandler Bing</h4>
             <p class="card-text">Could I be any better?</p>
@@ -743,7 +728,7 @@
       </div>
       <div class="col-12 col-sm-4">
         <div class="card" >
-          <img class="card-img-top" src="./img/joey.jpg" alt="Card image">
+          <img class="card-img-top" src="./img/joey.jpg" alt="Card image" height="300px" width="300px">
           <div class="card-body">
             <h4 class="card-title">Joey Tribiani</h4>
             <p class="card-text">If you dont understand something doesnt mean its wrong.</p>
@@ -752,7 +737,7 @@
       </div>
       <div class="col-12 col-sm-4">
         <div class="card" >
-          <img class="card-img-top" src="./img/ross.jpg" alt="Card image">
+          <img class="card-img-top" src="./img/ross.jpg" alt="Card image" height="300px" width="300px">
           <div class="card-body">
             <h4 class="card-title">Ross Geller</h4>
             <p class="card-text">"Unagi Is A Total State Of Awareness."</p>
@@ -767,33 +752,7 @@
 <hr style="height:2px;border-width:0;color:gray;background-color:darkgray;margin-top: 5em;">
 
 <!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid bg-grey">
-  <h2 class="text-center">CONTACT</h2>
-  <div class="row">
-    <div class="col-sm-5">
-      <p>Contact us and we'll get back to you within 24 hours.</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
-      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
-    </div>
-    <div class="col-sm-7 slideanim">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-        </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-        </div>
-      </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-      <div class="row">
-        <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Send</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
 
 <!-- Image of location/map -->
 <img src="./img/footer.jpg" class="w3-image w3-greyscale-min" style="width:100%">
