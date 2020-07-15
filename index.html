@@ -207,6 +207,18 @@
     border: 1px solid black;
     border-radius: 0%;
   }
+  .social{
+    transition: ease-in-out 0.3s;
+    font-size: 30px;
+    color: #f8f8f8;
+  }
+  .fa-facebook:hover, .fa-instagram:hover{
+    color:#303F9F;
+  }
+  .fa-google:hover, .fa-youtube:hover{
+    color:#D32F2F;
+  }
+  
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -406,9 +418,8 @@
   <div class="col-4 offset-4">
     <button class="btn btn-lg " id='book' style='height:7rem;width: auto;'><span style="font-size: x-large;">Book a free Consultation</span></button>
   </div>
+</div>
 
-
-<hr style="height:2px;border-width:0;color:gray;background-color:darkgray;margin-top: 5em;">
 
 <!-- Container (Services Section) -->
 <div id="services" class="container-fluid text-center">
@@ -624,7 +635,7 @@
     <div class="row slideanim">
       <div class="col-12 col-sm-4">
         <div class="card" >
-          <img class="card-img-top" src="./img/c8.jpg" width="100%" alt="Modular kitchen">
+          <img class="card-img-top" src="./img/c8.jpg" width="100%" style="min-height: 300px;" alt="Modular kitchen">
           <h4>Modular Kitchen</h4>  
         </div>
       </div>
@@ -647,7 +658,7 @@
       </div>
       <div class="col-12 col-sm-4">
         <div class="card" >
-          <img class="card-img-top" src="./img/wood.jpg" width="100%" alt="Wooding">
+          <img class="card-img-top" src="./img/wood.jpg" width="100%" style="min-height: 300px;" alt="Wooding">
           <h4>Wooding and Furniture</h4>  
         </div>
       </div>
@@ -655,19 +666,19 @@
     <div class="row slideanim">
       <div class="col-12 col-sm-4">
         <div class="card" >
-          <img class="card-img-top" src="./img/bedroom.jpg" width="100%" alt="bedroom">
+          <img class="card-img-top" src="./img/bedroom.jpg" width="100%" style="min-height: 300px;" alt="bedroom">
           <h4>Bedroom Designing</h4>  
         </div>
       </div>
       <div class="col-12 col-sm-4">
         <div class="card" >
-          <img class="card-img-top" src="./img/interior.jpg" width="100%" alt="Home interior Designing">
+          <img class="card-img-top" src="./img/interior.jpg" width="100%" style="min-height: 300px;" alt="Home interior Designing">
           <h4>Home Interiors</h4>  
         </div>
       </div>
       <div class="col-12 col-sm-4">
         <div class="card" >
-          <img class="card-img-top" src="./img/bathroom.jpg" width="100%" alt="Bathroom Designing">
+          <img class="card-img-top" src="./img/bathroom.jpg" width="100%" style="min-height: 300px;" alt="Bathroom Designing">
           <h4>Bathroom Designing</h4>  
         </div>
       </div>
@@ -675,7 +686,7 @@
   </div>  
   <div class="container">
     <div class="row slideanim">
-      <h2>What our customers say</h2>
+      <h2>Testimonial</h2>
       <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -753,14 +764,44 @@
 
 <!-- Container (Contact Section) -->
 
-
 <!-- Image of location/map -->
 <img src="./img/footer.jpg" class="w3-image w3-greyscale-min" style="width:100%">
 
-<footer class="container-fluid text-center">
-  <a href="#myPage" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a>
+<footer class="container-fluid text-center" style="background-color: black;">
+  <div class="container">
+    <div class="row slideanim">
+      <div class="col-xs-3">
+        <a href="www.facebook.com"><i class="fa fa-facebook fa-lg social" ></i></a>
+      </div>
+      <div class="col-xs-3">
+        <a href="www.google.com"><i class="fa fa-google fa-lg social" ></i></a>
+      </div>
+      <div class="col-xs-3">
+        <a href="www.youtube.com"><i class="fa fa-youtube fa-lg social" ></i></a>
+      </div>
+      <div class="col-xs-3">
+        <a href="www.instagram.com"><i class="fa fa-instagram fa-lg social" ></i></a>
+      </div>
+    </div>
+  </div>
+  <!-- <section class="footer-section bg-light">
+    <div class="social-links-warp" style="background-color:black;">
+      <div class="container">
+        <div class="social-links">
+          <a href='/' class="instagram"><i class="fa fa-instagram" ></i><span>instagram</span></a>
+          <a href='/' class="google-plus"><i class="fa fa-google-plus" ><span>g+plus</span></a>
+          <a href='/' class="pinterest"><i class="fa fa-pinterest" ></i><span>pinterest</span></a>
+          <a href='/' class="facebook"><i class="fa fa-facebook" ></i><span>facebook</span></a>
+          <a href='/' class="twitter"><i class="fa fa-twitter" ></i><span>twitter</span></a>
+          <a href='/' class="youtube"><i class="fa fa-youtube" ></i><span>youtube</span></a>
+          <a href='/' class="tumblr"><i class="fa fa-tumblr-square" ></i><span>tumblr</span></a>
+        </div>
+        <p class="text-white text-center mt-5">Copyright © All rights reserved | This Website is made with 
+        <i class="fa fa-heart-o" aria-hidden="true" ></i> by <a href="https://hyathi.com" target="_blank">Hyathi Technologies</a></p>
+      </div>
+    </div>
+    
+  </section>   -->
 </footer>
 
 <script>
